@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 import "../styles/home.css";
 import { Container, Row, Col, CardSubtitle } from "reactstrap";
@@ -19,13 +19,12 @@ import NewsLetter from "../shared/Newsletter";
 // importing
 import load from "little-loader";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import img1 from '../assets/images/slider-1.jpg';
-import img2 from '../assets/images/slider-2.jpg';
-import img3 from '../assets/images/slider-3.jpg';
-
+import img1 from "../assets/images/slider-1.jpg";
+import img2 from "../assets/images/slider-2.jpg";
+import img3 from "../assets/images/slider-3.jpg";
 
 // Replace '<url>' with the actual URL of the Google Fonts stylesheet
 const fontUrl =
@@ -41,25 +40,20 @@ load(fontUrl, (err) => {
   }
 });
 
- 
-   
-
 const Home = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-   
-   const [activeIndex, setActiveIndex] = useState(0);
- 
-   const handleSlideChange = (index) => {
-     setActiveIndex(index);
-   };
-   useEffect(() => {
-      const intervalId = setInterval(() => {
-        const newIndex = (activeIndex + 1) % 3; // Assuming you have 3 slides
-        handleSlideChange(newIndex);
-      }, 1000); // Change the interval (in milliseconds) according to your preference
-  
-      return () => clearInterval(intervalId); // Clear the interval on component unmount
-    }, [activeIndex]);
+  const handleSlideChange = (index) => {
+    setActiveIndex(index);
+  };
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const newIndex = (activeIndex + 1) % 3; // Assuming you have 3 slides
+      handleSlideChange(newIndex);
+    }, 1000); // Change the interval (in milliseconds) according to your preference
+
+    return () => clearInterval(intervalId); // Clear the interval on component unmount
+  }, [activeIndex]);
   return (
     <>
       {/* ========== HERO SECTION ========== */}
@@ -72,10 +66,27 @@ const Home = () => {
                   <Subtitle subtitle={"Know Before You Go"} />
                   <img src={worldImg} alt="" />
                 </div>
-                <h1>
+                {/* <h1>
                   Traveling opens the door to creating{" "}
                   <span className="hightlight"> memories</span>
-                </h1>
+                </h1> */}
+                <div class="wrapper">
+                  <div class="static-txt">Travel Blend</div>
+                  <ul class="dynamic-txts">
+                    <li>
+                      <span>Where Every Adventure Begins</span>
+                    </li>
+                    <li>
+                      <span>Explore Your Dream Destinations</span>
+                    </li>
+                    <li>
+                      <span>Craft Your Story, Live Your Adventure</span>
+                    </li>
+                    <li>
+                      <span>Curating Dreams. Let Your Journey Begin!</span>
+                    </li>
+                  </ul>
+                </div>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Ullam ipsum nobis asperiores soluta voluptas quas voluptates.
@@ -108,77 +119,92 @@ const Home = () => {
       {/* ============================================================== */}
 
       {/* ==================== SLIDER SECTION START ====================== */}
-      <div className='container-carousel' style={{ width: '90%', margin: 'auto', height: '800px' }}>
-      <div id="carouselExampleCaptions" className="carousel slide" >
-        <div className="carousel-indicators" >
+      <div
+        className="container-carousel"
+        style={{ width: "90%", margin: "auto", height: "800px" }}
+      >
+        <div id="carouselExampleCaptions" className="carousel slide">
+          <div className="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to={0}
+              className={activeIndex === 0 ? "active" : ""}
+              aria-current={activeIndex === 0 ? "true" : "false"}
+              aria-label="Slide 1"
+            />
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to={1}
+              className={activeIndex === 1 ? "active" : ""}
+              aria-label="Slide 2"
+            />
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to={2}
+              className={activeIndex === 2 ? "active" : ""}
+              aria-label="Slide 3"
+            />
+          </div>
+          <div className="carousel-inner">
+            <div
+              className={`carousel-item ${activeIndex === 0 ? "active" : ""}`}
+            >
+              <img src={img1} className="d-block w-100" alt="..." />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </div>
+            </div>
+            <div
+              className={`carousel-item ${activeIndex === 1 ? "active" : ""}`}
+            >
+              <img src={img2} className="d-block w-100" alt="..." />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>
+                  Some representative placeholder content for the second slide.
+                </p>
+              </div>
+            </div>
+            <div
+              className={`carousel-item ${activeIndex === 2 ? "active" : ""}`}
+            >
+              <img src={img3} className="d-block w-100" alt="..." />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+          </div>
           <button
+            className="carousel-control-prev"
             type="button"
             data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to={0}
-            className={activeIndex === 0 ? 'active' : ''}
-            aria-current={activeIndex === 0 ? 'true' : 'false'}
-            aria-label="Slide 1"
-          />
+            data-bs-slide="prev"
+            onClick={() => handleSlideChange((activeIndex - 1 + 3) % 3)}
+          >
+            <span className="carousel-control-prev-icon" aria-hidden="true" />
+            <span className="visually-hidden">Previous</span>
+          </button>
           <button
+            className="carousel-control-next"
             type="button"
             data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to={1}
-            className={activeIndex === 1 ? 'active' : ''}
-            aria-label="Slide 2"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to={2}
-            className={activeIndex === 2 ? 'active' : ''}
-            aria-label="Slide 3"
-          />
+            data-bs-slide="next"
+            onClick={() => handleSlideChange((activeIndex + 1) % 3)}
+          >
+            <span className="carousel-control-next-icon" aria-hidden="true" />
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
-        <div className="carousel-inner" >
-          <div className={`carousel-item ${activeIndex === 0 ? 'active' : ''}`}>
-            <img src={img1} className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-          <div className={`carousel-item ${activeIndex === 1 ? 'active' : ''}`}>
-            <img src={img2} className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
-          <div className={`carousel-item ${activeIndex === 2 ? 'active' : ''}`}>
-            <img src={img3} className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-          onClick={() => handleSlideChange((activeIndex - 1 + 3) % 3)}
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true" />
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-          onClick={() => handleSlideChange((activeIndex + 1) % 3)}
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true" />
-          <span className="visually-hidden">Next</span>
-        </button>
       </div>
-    </div>
 
       {/* ==================== HERO SECTION START ====================== */}
       <section>
