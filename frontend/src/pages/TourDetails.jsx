@@ -62,6 +62,7 @@ const TourDetails = () => {
    useEffect(() => {
       window.scrollTo(0, 0)
    }, [tour])
+   // console.log('Reviews:', reviews);
 
    return (
       <section>
@@ -119,6 +120,7 @@ const TourDetails = () => {
 
                            <ListGroup className='user__reviews'>
                               {
+                                 
                                  reviews?.map(review => (
                                     <div className="review__item">
                                        <img src={avatar} alt="" />
