@@ -20,6 +20,18 @@ body {
   font-family: var(--font-name);
 }
 
+
+.container-carousel{
+
+}
+.carousel slide{
+  
+}
+.carousel-indicators{
+  border-radius: 10px;
+
+}
+/* style={{borderRadius: "10px"}} */
 section {
   padding: 50px 0px;
 }
