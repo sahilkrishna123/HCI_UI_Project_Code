@@ -16,6 +16,7 @@ import MasonryImagesGallery from "../components/Image-gallery/MasonryImagesGalle
 import Testimonials from "../components/Testimonial/Testimonials";
 import NewsLetter from "../shared/Newsletter";
 
+import { NavLink, Link, useNavigate } from 'react-router-dom'
 // importing
 import load from "little-loader";
 
@@ -288,7 +289,16 @@ const Home = () => {
               <MasonryImagesGallery />
             </Col>
           </Row>
+          
         </Container>
+        <center>
+<br/>
+<Link to="/gallery" className="explore-more-a">
+<button type="button" className="booking__btn">
+          Explore More
+</button>
+</Link>
+          </center>
       </section>
       {/* ========== GALLERY SECTION END ================ */}
 
