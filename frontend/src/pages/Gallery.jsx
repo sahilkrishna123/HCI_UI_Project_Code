@@ -1,9 +1,26 @@
 
 import React from 'react';
 import "../styles/gallery_css.css";
-import img1 from "../assets/images/slider-1.jpg";
-import img2 from "../assets/images/slider-2.jpg";
-import img3 from "../assets/images/slider-3.jpg";
+import img1 from "../assets/images/eiffeltower.jpeg";
+import img2 from "../assets/images/hunza.avif";
+import img3 from "../assets/images/swat.jpg";
+import img4 from "../assets/images/burjkhalifa.avif";
+import img5 from "../assets/images/maldives.jpeg";
+import img6 from "../assets/images/bangkok.jpg";
+import img7 from "../assets/images/phuket.avif";
+import img8 from "../assets/images/sydney.webp";
+import img9 from "../assets/images/barcelona.avif";
+import img10 from "../assets/images/bali.avif";
+import eiffelImg from '../assets/images/eiffel.jpeg'
+import galleryImg01 from '../assets/images/gallery-01.jpg'
+import galleryImg02 from '../assets/images/gallery-02.jpg'
+import galleryImg03 from '../assets/images/gallery-03.jpg'
+import galleryImg04 from '../assets/images/gallery-04.jpg'
+import galleryImg05 from '../assets/images/gallery-05.jpg'
+import galleryImg06 from '../assets/images/gallery-06.jpg'
+import galleryImg07 from '../assets/images/gallery-07.jpg'
+import galleryImg08 from '../assets/images/gallery-02.jpg'
+
 import Subtitle from "./../shared/subtitle";
 
 export default function Gallery() {
@@ -27,59 +44,59 @@ export default function Gallery() {
       
       <div className="container1">
         <div id="slide1">
-          <div className="item1" style={{ backgroundImage: `url(${img1})` }}>
-            <div className="content1">
+          <div className="item1" style={{ backgroundImage: `url(${img6})` }}>
+            {/* <div className="content1">
               <div className="name1">Travel Blend</div>
               <div className="des1">
                 Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
               </div>
               <button>See more</button>
-            </div>
+            </div> */}
           </div>
           <div className="item1" style={{ backgroundImage: `url(${img2})` }}>
-            <div className="content1">
+            {/* <div className="content1">
               <div className="name1">Travel Blend</div>
               <div className="des1">
                 Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
               </div>
               <button>See more</button>
-            </div>
+            </div> */}
           </div>
-          <div className="item1" style={{ backgroundImage: `url(${img3})` }}>
-            <div className="content1">
+          <div className="item1" style={{ backgroundImage: `url(${img4})` }}>
+            {/* <div className="content1">
               <div className="name1">Travel Blend</div>
               <div className="des1">
                 Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
               </div>
               <button>See more</button>
-            </div>
+            </div> */}
           </div>
-          <div className="item1" style={{ backgroundImage: `${img1}` }}>
-            <div className="content1">
+          <div className="item1" style={{ backgroundImage: `${img5}` }}>
+            {/* <div className="content1">
               <div className="name1">Travel Blend</div>
               <div className="des1">
                 Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
               </div>
               <button>See more</button>
-            </div>
+            </div> */}
           </div>
-          <div className="item1" style={{ backgroundImage: `url(${img2})` }}>
-            <div className="content1">
+          <div className="item1" style={{ backgroundImage: `url(${img5})` }}>
+            {/* <div className="content1">
               <div className="name1">Travel Blend</div>
               <div className="des1">
                 Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
               </div>
               <button>See more</button>
-            </div>
+            </div> */}
           </div>
-          <div className="item1" style={{ backgroundImage: `url(${img3})` }}>
-            <div className="content1">
+          <div className="item1" style={{ backgroundImage: `url(${img8})` }}>
+            {/* <div className="content1">
               <div className="name1">Travel Blend</div>
               <div className="des1">
                 Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
               </div>
               <button>See more</button>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="buttons">
@@ -141,80 +158,80 @@ export default function Gallery() {
 {/* <div style={{ margin:"10px",marginLeft:"100px"}}> */}
 <div style={{marginTop: "-150px"}}>
 <center>
-<h1 className="gallery-heading-text">Gallery</h1>
+<h1 className="gallery-heading-text" style={{color:"white" ,backgroundColor:"#1A5891"}}>Gallery</h1>
 </center>
-       <div className="container-gallery">
+       <div className="container-gallery " style={{marginTop:"150"}}>
         <div className="grid-item1">
           <div className="image-container">
             <img src={img1} alt="Your Image" />
             <div className="image-overlay">
-              <p className="overlay-text">Hover to Zoom</p>
+              <p className="overlay-text">Eiffel Tower</p>
             </div>
           </div>
         </div>
         <div className="grid-item1">
         <div className="image-container">
-            <img src={img1} alt="Your Image" />
+            <img src={img2} alt="Your Image" />
             <div className="image-overlay">
-              <p className="overlay-text">Hover to Zoom</p>
+              <p className="overlay-text">Hunza</p>
             </div>
           </div>
         </div>
         <div className="grid-item1">
         <div className="image-container">
-            <img src={img1} alt="Your Image" />
+            <img src={img3} alt="Your Image" />
             <div className="image-overlay">
-              <p className="overlay-text">Hover to Zoom</p>
+              <p className="overlay-text">Swat</p>
             </div>
           </div>
         </div>
         <div className="grid-item1">
         <div className="image-container">
-            <img src={img1} alt="Your Image" />
+            <img src={img4} alt="Your Image" />
             <div className="image-overlay">
-              <p className="overlay-text">Hover to Zoom</p>
+              <p className="overlay-text">Burj Khalifa</p>
             </div>
           </div>
         </div><div className="grid-item1">
         <div className="image-container">
-            <img src={img1} alt="Your Image" />
+            <img src={img5} alt="Your Image" />
             <div className="image-overlay">
-              <p className="overlay-text">Hover to Zoom</p>
+              <p className="overlay-text">Maldives</p>
             </div>
           </div>
         </div><div className="grid-item1">
         <div className="image-container">
-            <img src={img1} alt="Your Image" />
+            <img src={img6} alt="Your Image" />
             <div className="image-overlay">
-              <p className="overlay-text">Hover to Zoom</p>
+              <p className="overlay-text">Bangkok</p>
             </div>
           </div>
         </div><div className="grid-item1">
         <div className="image-container">
-            <img src={img1} alt="Your Image" />
+            <img src={img7} alt="Your Image" />
             <div className="image-overlay">
-              <p className="overlay-text">Hover to Zoom</p>
+              <p className="overlay-text">Phuket</p>
             </div>
           </div>
         </div><div className="grid-item1">
         <div className="image-container">
-            <img src={img1} alt="Your Image" />
+            <img src={img8} alt="Your Image" />
             <div className="image-overlay">
-              <p className="overlay-text">Hover to Zoom</p>
+              <p className="overlay-text">Sydney</p>
             </div>
           </div>
         </div><div className="grid-item1">
         <div className="image-container">
-            <img src={img1} alt="Your Image" />
+            <img src={img9} alt="Your Image" />
             <div className="image-overlay">
-              <p className="overlay-text">Hover to Zoom</p>
+              <p className="overlay-text">Barcelona</p>
             </div>
           </div>
         </div><div className="grid-item1">
         <div className="image-container">
-            <img src={img1} alt="Your Image" />
+            <img src={img10} alt="Your Image" />
             <div className="image-overlay">
-              <p className="overlay-text">Hover to Zoom</p>
+              <p className="overlay-text">Bali</p>
             </div>
           </div>
         </div>

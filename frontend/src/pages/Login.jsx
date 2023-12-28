@@ -2,8 +2,8 @@ import React, { useContext, useState } from 'react'
 import { Container, Row, Col, Form, FormGroup, Button } from 'reactstrap'
 import '../styles/login.css'
 import { Link, useNavigate } from 'react-router-dom'
-import loginImg from '../assets/images/login.png'
-import userIcon from '../assets/images/user.png'
+import loginImg from '../assets/images/loginImg2.png'
+import userIcon from '../assets/images/user2.png'
 import { AuthContext } from '../context/AuthContext'
 import { BASE_URL } from '../utils/config'
 
@@ -53,12 +53,12 @@ const Login = () => {
                <Col lg='8' className='m-auto'>
                   <div className="login__container d-flex justify-content-between">
                      <div className="login__img">
-                        <img src={loginImg} alt="" />
+                        <img src={loginImg} alt=""  />
                      </div>
 
                      <div className="login__form">
                         <div className="user">
-                           <img src={userIcon} alt="" />
+                           <img src={userIcon} alt="" style={{borderRadius:"50%",border:"2px solid white"} }/>
                         </div>
                         <h2>Login</h2>
 

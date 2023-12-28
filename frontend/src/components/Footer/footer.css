@@ -5,6 +5,7 @@
 
 .footer .logo img {
    width        : 60%;
+   height: 100px !important;
    margin-bottom: 1rem;
 }
 
@@ -31,11 +32,11 @@
 }
 
 .footer__quick-links a:hover {
-   color: var(--secondary-color);
+   color: var(--third-color);
 }
 
 .footer__quick-links h6 span i {
-   color    : var(--secondary-color);
+   color    : var(--third-color);
    font-size: 1.4rem;
 }
 

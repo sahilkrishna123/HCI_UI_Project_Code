@@ -1,7 +1,7 @@
 .booking {
    padding      : 2rem;
    border-radius: 0.5rem;
-   border       : 1px solid var(--secondary-color);
+   border       : 1px solid var(--third-color);
    position     : sticky;
    top          : 80px;
 }
@@ -24,7 +24,7 @@
 }
 
 .booking__top span i {
-   color: var(--secondary-color);
+   color: var(--third-color);
 }
 
 .booking__top {

@@ -23,9 +23,9 @@ import load from "little-loader";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import img1 from "../assets/images/slider-1.jpg";
-import img2 from "../assets/images/slider-2.jpg";
-import img3 from "../assets/images/slider-3.jpg";
+import img1 from "../assets/images/img1gallery.jpg";
+import img2 from "../assets/images/img2gallery.jpg";
+import img3 from "../assets/images/img3gallery.jpg";
 
 // Replace '<url>' with the actual URL of the Google Fonts stylesheet
 const fontUrl =
@@ -51,7 +51,7 @@ const Home = () => {
     const intervalId = setInterval(() => {
       const newIndex = (activeIndex + 1) % 3; // Assuming you have 3 slides
       handleSlideChange(newIndex);
-    }, 1000); // Change the interval (in milliseconds) according to your preference
+    }, 200); // Change the interval (in milliseconds) according to your preference
 
     return () => clearInterval(intervalId); // Clear the interval on component unmount
   }, [activeIndex]);
@@ -122,9 +122,10 @@ const Home = () => {
       {/* ==================== SLIDER SECTION START ====================== */}
       <div
         className="container-carousel"
-        style={{ width: "90%", margin: "auto", height: "800px" }}
+        style={{ width: "80%", margin: "auto", height: "800px" }}
       >
-        <div id="carouselExampleCaptions" className="carousel slide">
+      
+        <div id="carouselExampleCaptions" className="carousel slide" data-bs-interval="500">
           <div className="carousel-indicators">
             <button
               type="button"
@@ -155,9 +156,9 @@ const Home = () => {
             >
               <img src={img1} className="d-block w-100" alt="..." />
               <div className="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
+                <h5></h5>
                 <p>
-                  Some representative placeholder content for the first slide.
+                  
                 </p>
               </div>
             </div>
@@ -166,9 +167,9 @@ const Home = () => {
             >
               <img src={img2} className="d-block w-100" alt="..." />
               <div className="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
+                <h5></h5>
                 <p>
-                  Some representative placeholder content for the second slide.
+                  
                 </p>
               </div>
             </div>
@@ -177,9 +178,9 @@ const Home = () => {
             >
               <img src={img3} className="d-block w-100" alt="..." />
               <div className="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
+                <h5></h5>
                 <p>
-                  Some representative placeholder content for the third slide.
+             
                 </p>
               </div>
             </div>

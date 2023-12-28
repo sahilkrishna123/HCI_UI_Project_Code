@@ -9,7 +9,7 @@
 
 .form__group span {
    font-size: 1.8rem;
-   color    : #ee6e6e;
+   color    : var(--third-color);
 }
 
 .form__group input {
@@ -34,7 +34,7 @@
 .search__icon i {
    font-size    : 1.6rem;
    padding      : 0.5rem;
-   background   : var(--secondary-color);
+   background   : var(--third-color);
    color        : #fff;
    border-radius: 10px 5px 10px 5px;
    cursor       : pointer;

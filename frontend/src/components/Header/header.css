@@ -5,6 +5,9 @@
    --text-color        : #6e7074;
    --font-name         : "Montserrat", sans-serif;
    --subtitle-font-name: "Island Moments", cursive;
+   --third-color: #1A5891;
+   --white-color:#ffffff;
+   --black-color:#000000;
 }
 
 .header {
@@ -14,11 +17,14 @@
 }
 
 .logo img {
-   width: 30%;
+   width: 120%;
+   height: 90px!important;
+   
 }
 
 .menu {
    margin-bottom: 0;
+   margin-left: 250px !important;
 }
 
 .nav__item a {
@@ -26,6 +32,7 @@
    color          : var(--heading-color);
    font-weight    : 500;
    font-size      : 1.3rem;
+   /* margin-right: 20px !important; */
 }
 
 .nav__item a:hover {
@@ -33,7 +40,7 @@
 }
 
 .nav__item a.active__link {
-   color: var(--secondary-color);
+   color: var(--third-color);
 }
 
 .mobile__menu {
@@ -53,7 +60,20 @@
    box-shadow : 3px 3px 8px -3px #ddd;
    z-index    : 999;
 }
-
+.primary__btn{
+   background-color: var(--third-color) !important;
+   margin-right: 20px !important;
+}
+.btn-dark{
+   background-color: var(--third-color) !important;
+   margin-right: 20px !important;
+}
+.nav__right{
+   margin-left: 20px !important;
+}
+.after-login{
+   margin-right: 20px !important;
+}
 /* =============== RESPONSIVE ================ */
 @media only screen and (max-width:992px) {
    .logo img {

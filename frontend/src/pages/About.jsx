@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
-import aboutImg from '../assets/images/aboutImg.png';
+import aboutImg from '../assets/images/aboutImg.jpg';
 import aboutImg1 from '../assets/images/aboutImg1.jpg';
 import vacations from '../assets/images/vacations.jpg';
 

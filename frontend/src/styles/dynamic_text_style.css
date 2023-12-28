@@ -31,7 +31,7 @@
 }
 .dynamic-txts li{
   list-style: none;
-  color: #FC6D6D;
+  /* color: #FC6D6D; */
   font-size: 20px;
   font-weight: 500;
   position: relative;
@@ -60,7 +60,7 @@
   width: 100%;
   /* background: #343F4F; */
   background: white;
-  border-left: 2px solid #FC6D6D;
+  /* border-left: 2px solid #FC6D6D; */
   animation: typing 3s steps(10) infinite;
 }
 @keyframes typing {
