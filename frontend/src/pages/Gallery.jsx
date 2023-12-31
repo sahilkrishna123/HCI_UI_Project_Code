@@ -20,7 +20,7 @@ import galleryImg05 from '../assets/images/gallery-05.jpg'
 import galleryImg06 from '../assets/images/gallery-06.jpg'
 import galleryImg07 from '../assets/images/gallery-07.jpg'
 import galleryImg08 from '../assets/images/gallery-02.jpg'
-
+import Newsletter from '../shared/Newsletter'
 import Subtitle from "./../shared/subtitle";
 
 export default function Gallery() {
@@ -236,6 +236,7 @@ export default function Gallery() {
           </div>
         </div>
       </div> 
+      <Newsletter/>
       </div>
     </>
   );

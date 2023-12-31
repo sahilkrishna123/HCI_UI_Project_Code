@@ -3,7 +3,7 @@ import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 import aboutImg from '../assets/images/aboutImg.jpg';
 import aboutImg1 from '../assets/images/aboutImg1.jpg';
 import vacations from '../assets/images/vacations.jpg';
-
+import Newsletter from '../shared/Newsletter'
 import {Link} from "react-router-dom"
 import '../styles/about.css';
 const About = () => {
@@ -87,7 +87,8 @@ const About = () => {
           </CardImgOverlay>
         </Card>
       </div>
-    
+  
+    <Newsletter/>
     </div>
   );
 };
